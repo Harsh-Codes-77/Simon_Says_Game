@@ -4,6 +4,7 @@ let btns = ["red", "yellow", "green", "purple"];
 let started = false;
 let level = 0;
 let highScore = localStorage.getItem("highScore") || 0;
+const startButton = document.getElementById("start-button");
 
 const h2 = document.querySelector("h2");
 const highScoreContainer = document.createElement("div");
@@ -57,7 +58,7 @@ function checkAns(idx) {
         h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function () {
-            document.querySelector("body").style.backgroundColor = "rgb(7, 14, 53)";
+            document.querySelector("body").style.backgroundColor = "#1a1a2e";
         }, 150);
         reset();
     }
@@ -78,11 +79,21 @@ for (let btn of allBtns) {
     btn.addEventListener("click", btnPress);
 }
 
+startButton.addEventListener("click", function () {
+    if (!started) {
+        console.log("Game is Started");
+        started = true;
+        startButton.style.display = "none"; // Hide the button
+        levelUp();
+    }
+});
+
 function reset() {
     started = false;
     gameSeq = [];
     userSeq = [];
     level = 0;
+    startButton.style.display = "block";
 }
 
 function updateHighScore() {

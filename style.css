@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
 }
 
@@ -30,7 +30,7 @@ h2 {
 
 /* High Score Container */
 #high-score-container {
-    background: linear-gradient(145deg, #0f3460, #16213e);
+    background: #1a1a2e;
     color: #fff;
     padding: 20px;
     border-radius: 15px;
@@ -120,6 +120,43 @@ h2 {
 
     h2 {
         font-size: 1rem;
+    }
+}
+/* Start Button Styles */
+.start-btn {
+    position: absolute;
+    top: 85%;
+    background: #1a1a2e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    border: 2px solid rgb(18, 241, 222);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease-in-out;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+}
+
+.start-btn:active {
+    transform: scale(0.95);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
