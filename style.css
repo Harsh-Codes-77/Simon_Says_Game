@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    text-align: center;
+    background-color: #1a1a2e;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #dfeff8;
+    margin: 10px 0;
+    text-shadow: 2px 2px #000;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: glow 1.5s infinite alternate;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* High Score Container */
+#high-score-container {
+    background: linear-gradient(145deg, #0f3460, #16213e);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 2px solid #e94560;
+}
+
+/* Button Styles */
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 20%;
+    border: 8px solid #000;
+    margin: 1rem;
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Colors for Buttons */
+.red {
+    background: linear-gradient(145deg, #ff4b5c, #ff1e41);
+}
+
+.yellow {
+    background: linear-gradient(145deg, #ffcf40, #ffa500);
+}
+
+.green {
+    background: linear-gradient(145deg, #28a745, #218838);
+}
+
+.purple {
+    background: linear-gradient(145deg, #8566f9, #6c63ff);
+}
+
+/* Flash Effects */
+.flash {
+    background-color: white;
+    box-shadow: 0 0 20px white;
+}
+
+.userflash {
+    background-color: #0edd7c;
+    box-shadow: 0 0 20px #0edd7c;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .btn {
+        height: 120px;
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+        margin: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+
